@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+        apache2:
+                image: php:7.2-apache
+                ports:
+                        - "8080:80"
+                restart: unless-stopped
+                volumes:
+                        - ./html:/var/www/html
